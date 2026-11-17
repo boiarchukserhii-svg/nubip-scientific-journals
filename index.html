@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#e9dcf7">
+  <meta name="description" content="Наукові журнали НУБіП України: каталог, пошук за спеціальністю та інформація для авторів.">
+  <meta name="color-scheme" content="light">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Наукові журнали НУБіП України</title>
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <aside class="sidebar" aria-label="Головна навігація">
+      <a class="brand" href="#overview" aria-label="Наукові журнали – головна"><span class="brand-mark"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5.5c-3.4-2-6.5-1.8-9-1v13c2.6-.8 5.7-1 9 1 3.3-2 6.4-1.8 9-1v-13c-2.5-.8-5.6-1-9 1Zm0 0v13" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span>Наукові журнали <small>НУБіП України</small></span></a>
+      <div class="side-label">НАВІГАЦІЯ</div>
+      <nav class="side-nav" id="side-nav">
+        <button data-route="overview" class="nav-link active" type="button"><span aria-hidden="true">◫</span> Огляд</button>
+        <button data-route="catalog" class="nav-link" type="button"><span aria-hidden="true">▤</span> Каталог журналів</button>
+        <button data-route="match" class="nav-link" type="button"><span aria-hidden="true">⌕</span> Підбір видання</button>
+        <button data-route="guide" class="nav-link" type="button"><span aria-hidden="true">☷</span> Авторові</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="small-highlight"><span class="small-emoji">✧</span><b>Наука стає ближчою</b><p>Знайдіть журнал, що відповідає вашому дослідженню.</p></div><a href="https://nubip.edu.ua/naukovi-zhurnaly-nubip-ukrayiny-0" target="_blank" rel="noopener noreferrer">Офіційний каталог ↗</a></div>
+    </aside>
+    <div class="page-container">
+      <header class="topbar"><div class="topbar-title"><span class="eyebrow">НАУКОВИЙ ПРОСТІР НУБіП</span><span id="page-title">Аналітичний огляд</span></div><div class="top-actions"><span class="sync-dot"></span><span>Дані: 17.11.2026</span><button id="mobile-menu" class="mobile-menu" type="button" aria-label="Відкрити навігацію" aria-expanded="false">☰</button></div></header>
+      <main id="content" tabindex="-1"></main>
+      <footer class="footer"><div><a href="https://nubip.edu.ua/department/viddil-aspirantury-doktorantury-ta-atestatsiyi-naukovykh-kadriv" target="_blank" rel="noopener noreferrer">Офіційна сторінка відділу аспірантури ↗</a><span class="footer-sep">·</span><a href="https://nubip.edu.ua/naukovi-zhurnaly-nubip-ukrayiny-0" target="_blank" rel="noopener noreferrer">Каталог НУБіП ↗</a></div><div><strong>© Сергій БОЯРЧУК</strong>, 2026</div></footer>
+    </div>
+  </div>
+  <nav class="mobile-tabs" aria-label="Мобільна навігація"><button data-route="overview">◫<span>Огляд</span></button><button data-route="catalog">▤<span>Каталог</span></button><button data-route="match">⌕<span>Підбір</span></button><button data-route="guide">☷<span>Авторові</span></button></nav>
+  <div id="modal-layer"></div>
+  <script src="./data/journals.js"></script>
+  <script src="./app.js" defer></script>
+</body>
+</html>
