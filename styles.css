@@ -1,45 +1,15 @@
-/* Zakon Text – self-hosted web-font configuration
-   Official publisher: https://mincult.gov.ua/zakon/
-   Web font files are intentionally not included in this distribution.
-   Place the official, lawfully obtained fonts in the site root with names below.
-   Browser fallback remains usable until the site owner uploads them. */
 @font-face {
   font-family: 'Zakon Text Web';
-  src: local('Zakon Text Regular'), local('ZakonText-Regular'),
-       url('./ZakonText-Regular.woff2') format('woff2'),
-       url('./ZakonText-Regular.otf') format('opentype'),
-       url('./ZakonText-Regular.ttf') format('truetype');
+  src: url('./ZakonText-Regular.otf') format('opentype');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Zakon Text Web';
-  src: local('Zakon Text Bold'), local('ZakonText-Bold'),
-       url('./ZakonText-Bold.woff2') format('woff2'),
-       url('./ZakonText-Bold.otf') format('opentype'),
-       url('./ZakonText-Bold.ttf') format('truetype');
+  src: url('./ZakonText-Bold.otf') format('opentype');
   font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Zakon Text Web';
-  src: local('Zakon Text Italic'), local('ZakonText-Italic'),
-       url('./ZakonText-Italic.woff2') format('woff2'),
-       url('./ZakonText-Italic.otf') format('opentype'),
-       url('./ZakonText-Italic.ttf') format('truetype');
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Zakon Text Web';
-  src: local('Zakon Text Bold Italic'), local('ZakonText-BoldItalic'),
-       url('./ZakonText-BoldItalic.woff2') format('woff2'),
-       url('./ZakonText-BoldItalic.otf') format('opentype'),
-       url('./ZakonText-BoldItalic.ttf') format('truetype');
-  font-style: italic;
   font-weight: 700;
   font-display: swap;
 }
