@@ -154,3 +154,46 @@
   render();
   if('serviceWorker' in navigator && (location.protocol==='https:'||location.hostname==='localhost'))window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').catch(()=>{}));
 })();
+
+(() => {
+  const button = document.getElementById('install-app');
+  if (!button || matchMedia('(display-mode: standalone)').matches || navigator.standalone) return;
+  let pendingPrompt;
+  button.hidden = false;
+
+  window.addEventListener('beforeinstallprompt', event => {
+    event.preventDefault();
+    pendingPrompt = event;
+  });
+  window.addEventListener('appinstalled', () => {
+    pendingPrompt = undefined;
+    button.hidden = true;
+  });
+
+  function showInstructions() {
+    const appleMobile = /iPhone|iPad|iPod/.test(navigator.userAgent)
+      || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    document.getElementById('install-instructions').textContent = appleMobile
+      ? 'Відкрийте каталог у Safari, натисніть «Поділитися» й виберіть «На початковий екран».'
+      : 'У меню браузера виберіть «Встановити застосунок» або «Додати на головний екран». Якщо такої команди немає, відкрийте каталог у Chrome або Edge.';
+    document.getElementById('install-help').showModal();
+  }
+
+  button.addEventListener('click', async () => {
+    if (!pendingPrompt) {
+      showInstructions();
+      return;
+    }
+    const prompt = pendingPrompt;
+    pendingPrompt = undefined;
+    button.disabled = true;
+    try {
+      const { outcome } = await prompt.prompt();
+      if (outcome === 'accepted') button.hidden = true;
+    } catch {
+      showInstructions();
+    } finally {
+      button.disabled = false;
+    }
+  });
+})();

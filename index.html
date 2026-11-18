@@ -9,7 +9,7 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./icon-192.png">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=11">
   <title>Наукові журнали НУБіП України</title>
 </head>
 <body>
@@ -26,7 +26,7 @@
       <div class="sidebar-bottom"><div class="small-highlight"><span class="small-emoji">✧</span><b>Наука стає ближчою</b><p>Знайдіть журнал, що відповідає вашому дослідженню</p></div><a href="https://nubip.edu.ua/naukovi-zhurnaly-nubip-ukrayiny-0" target="_blank" rel="noopener noreferrer">Офіційний каталог ↗</a></div>
     </aside>
     <div class="page-container">
-      <header class="topbar"><div class="topbar-title"><span class="eyebrow">НАУКОВИЙ ПРОСТІР НУБіП</span><span id="page-title">Аналітичний огляд</span></div><div class="top-actions"><span class="sync-dot"></span><span>Наукові журнали НУБіП</span><button id="mobile-menu" class="mobile-menu" type="button" aria-label="Відкрити навігацію" aria-expanded="false">☰</button></div></header>
+      <header class="topbar"><div class="topbar-title"><span class="eyebrow">НАУКОВИЙ ПРОСТІР НУБіП</span><span id="page-title">Аналітичний огляд</span></div><div class="top-actions"><button id="install-app" class="btn secondary small" type="button" hidden>Встановити</button><button id="mobile-menu" class="mobile-menu" type="button" aria-label="Відкрити навігацію" aria-expanded="false">☰</button></div></header>
       <main id="content" tabindex="-1"></main>
       <footer class="footer"><div class="footer-actions" aria-label="Посилання та авторство">
         <a class="footer-button" href="https://nubip.edu.ua/department/viddil-naukovo-tekhnichnoyi-informatsiyi" target="_blank" rel="noopener noreferrer">Відділ науково-технічної інформації ↗</a>
@@ -38,7 +38,12 @@
   </div>
   <nav class="mobile-tabs" aria-label="Мобільна навігація"><button data-route="overview">◫<span>Огляд</span></button><button data-route="catalog">▤<span>Каталог</span></button><button data-route="match">⌕<span>Підбір</span></button><button data-route="guide">☷<span>Авторові</span></button></nav>
   <div id="modal-layer"></div>
+  <dialog id="install-help" aria-labelledby="install-title">
+    <h2 id="install-title">Встановлення застосунку</h2>
+    <p id="install-instructions"></p>
+    <form method="dialog"><button class="btn secondary small" type="submit">Закрити</button></form>
+  </dialog>
   <script src="./journals.js"></script>
-  <script src="./app.js?v=9" defer></script>
+  <script src="./app.js?v=11" defer></script>
 </body>
 </html>

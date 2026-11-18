@@ -47,3 +47,9 @@
   .journal-card .card-icon { width: 46px; height: 46px; }
   .card-icon .topic-svg { width: 25px; height: 25px; }
 }
+
+#install-app[hidden]{display:none}
+#install-app{white-space:nowrap}
+#install-help{width:min(28rem,calc(100% - 2rem));margin:auto;padding:1.25rem;border:1px solid var(--stroke);border-radius:18px;background:var(--surface);color:var(--dark)}
+#install-help::backdrop{background:rgba(43,29,59,.53)}
+#install-help form{margin-top:1rem}
